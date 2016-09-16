@@ -37,6 +37,18 @@
     return self;
 }
 
+- (void)setIconStartSize:(CGSize)iconStartSize
+{
+    //[super setIconStartSize:iconStartSize];
+    self.iconImageView.frame = CGRectMake(0, 0, iconStartSize.width, iconStartSize.height);
+    self.iconImageView.center = self.center;
+}
+
+- (void)setIconTintColor:(UIColor*)iconColor
+{
+    self.iconImageView.tintColor = iconColor;
+}
+
 - (void)startAnimationWithCompletionHandler:(void (^)())completionHandler
 {
     __block __weak typeof(self) weakSelf = self;
