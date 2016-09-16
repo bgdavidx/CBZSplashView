@@ -39,14 +39,15 @@
 
 - (void)setIconStartSize:(CGSize)iconStartSize
 {
-    //[super setIconStartSize:iconStartSize];
     self.iconImageView.frame = CGRectMake(0, 0, iconStartSize.width, iconStartSize.height);
     self.iconImageView.center = self.center;
+    [super setIconStartSize:iconStartSize];
 }
 
-- (void)setIconTintColor:(UIColor*)iconColor
+- (void)setIconColor:(UIColor*)iconColor
 {
     self.iconImageView.tintColor = iconColor;
+    [super setIconColor:iconColor];
 }
 
 - (void)startAnimationWithCompletionHandler:(void (^)())completionHandler
